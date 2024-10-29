@@ -22,3 +22,7 @@ gui:
 
   authorColors:
     '*': '#b7bdf8'
+git:
+    paging:
+        colorArg: always
+        pager: delta --dark --paging=never
