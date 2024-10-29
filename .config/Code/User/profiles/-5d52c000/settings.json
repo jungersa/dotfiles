@@ -1,0 +1,294 @@
+{
+    "editor.guides.bracketPairs": "active",
+    "workbench.editor.enablePreview": false,
+    // EDITOR
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "trailing",
+    "editor.linkedEditing": true,
+    "editor.occurrencesHighlight": "off",
+    // SUGGESTION
+    "editor.suggest.insertMode": "replace",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    // FILE EXPLORER
+    "explorer.autoReveal": false,
+    "workbench.tree.indent": 16,
+    // FONTS
+    "editor.fontFamily": "'JetBrains Mono', monospace",
+    "editor.fontLigatures": false,
+    "editor.lineHeight": 1.55,
+    // EXTENSIONS
+    // - GitLens
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    // =================
+    // VIM CONFIGURATION
+    // =================
+    // Vim editor settings
+    "editor.lineNumbers": "relative",
+    "editor.cursorSurroundingLines": 8,
+    // Vim base settings
+    "vim.useSystemClipboard": true,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.duration": 250,
+    // Vim extensions
+    "vim.surround": true,
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+    // Vim keymaps
+    "vim.leader": "<space>",
+    "vim.useCtrlKeys": true,
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // Bind < and > in visual mode to indent/oudent lines
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "p"
+            ],
+            "after": [
+                "p",
+                "g",
+                "v",
+                "y",
+            ]
+        },
+        // Turn of vim search
+        {
+            "before": [
+                "<leader>",
+                "s",
+                "h"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "g",
+                "p",
+                "d"
+            ],
+            "commands": [
+                "editor.action.peekDefinition"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "h"
+            ],
+            "commands": [
+                "editor.action.showDefinitionPreviewHover"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "i"
+            ],
+            "commands": [
+                "editor.action.goToImplementation"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "p",
+                "i"
+            ],
+            "commands": [
+                "editor.action.peekImplementation"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "q"
+            ],
+            "commands": [
+                "editor.action.quickFix"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                "editor.action.referenceSearch.trigger"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "t"
+            ],
+            "commands": [
+                "editor.action.goToTypeDefinition"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "p",
+                "t"
+            ],
+            "commands": [
+                "editor.action.peekTypeDefinition"
+            ]
+        },
+        // Panes commands
+        {
+            "before": [
+                "<leader>",
+                "e"
+            ],
+            "commands": [
+                "workbench.view.explorer"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "g"
+            ],
+            "commands": [
+                "workbench.view.search"
+            ]
+        },
+        // Split panes
+        {
+            "before": [
+                "<leader>",
+                "s"
+            ],
+            "commands": [
+                ":split"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "v"
+            ],
+            "commands": [
+                ":vsplit"
+            ]
+        },
+        // Navigation
+        {
+            "before": [
+                "<leader>",
+                "b"
+            ],
+            "commands": [
+                ":bprev"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "n"
+            ],
+            "commands": [
+                ":bnext"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "h"
+            ],
+            "commands": [
+                "workbench.action.focusLeftGroup"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "j"
+            ],
+            "commands": [
+                "workbench.action.focusDownGroup"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "k"
+            ],
+            "commands": [
+                "workbench.action.focusUpGroup"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "l"
+            ],
+            "commands": [
+                "workbench.action.focusRightGroup"
+            ]
+        },
+    ],
+    "explorer.confirmDelete": false,
+    "window.customTitleBarVisibility": "auto",
+    "window.menuBarVisibility": "compact",
+    "workbench.colorTheme": "Catppuccin Frappé",
+    "zenMode.centerLayout": false,
+    "zenMode.fullScreen": false,
+    "zenMode.hideLineNumbers": false,
+    "workbench.statusBar.visible": false,
+    "workbench.tips.enabled": false,
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.layoutControl.enabled": false,
+    "breadcrumbs.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "github.gitProtocol": "ssh",
+    "git.enableCommitSigning": true,
+    "workbench.productIconTheme": "fluent-icons",
+    "material-icon-theme.folders.color": "#ca9ee6",
+    "material-icon-theme.hidesExplorerArrows": true,
+    "workbench.iconTheme": "eq-material-theme-icons-palenight",
+    "gitHistory.includeRemoteBranches": true,
+    "gitlens.showWelcomeOnInstall": false,
+    "gitlens.showWhatsNewAfterUpgrades": false,
+    "gitlens.plusFeatures.enabled": false,
+    "gitlens.virtualRepositories.enabled": false,
+    "gitlens.ai.experimental.generateCommitMessage.enabled": false,
+    "gitlens.telemetry.enabled": false,
+}
