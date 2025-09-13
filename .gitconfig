@@ -1,11 +1,7 @@
 [user]
-	signingkey = ~/.ssh/id_ed25519.pub
+	signingkey = 351AF4BD9BE95873
 	name = Arnaud Jungers
 	email = arnaud.jungers@gmail.com
-
-[gpg]
-	format = ssh
-
 [color]
 	ui = auto
 	
@@ -17,6 +13,8 @@
 
 [core]
 	pager = delta
+	editor = vim
+	autocrlf = input
 
 [interactive]
 	diffFilter = delta --color_only
@@ -60,4 +58,8 @@
 
 
 [merge]
-	conflictstyle = diff3
+	conflictstyle = zdiff3
+[commit]
+	gpgsign = false
+[status]
+	short = true
