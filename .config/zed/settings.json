@@ -1,224 +1,116 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
 {
-  // Vim settings
-  "vim_mode": true,
-  "vim": {
-    "enable_vim_sneak": true
-  },
-
-  "base_keymap": "VSCode",
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
-  },
-  "relative_line_numbers": true,
-
-  // Font settings
-  "ui_font_size": 13,
-  "ui_font_weight": 200,
-  "ui_font_family": "JetBrains Mono",
-  "buffer_font_size": 14,
-  "buffer_font_weight": 200,
-  "buffer_font_family": "JetBrainsMono Nerd Font",
-
-  // Theme settings
-  "icon_theme": "Colored Zed Icons Theme Dark",
-  "theme": {
-    "mode": "system",
-    "light": "Kanagawa Wave",
-    "dark": "Catppuccin Mocha"
-  },
-  // UI
-  "toolbar": {
-    "breadcrumbs": false,
-    "quick_actions": false
-    // "selections_menu": false
-  },
-  "scrollbar": {
-    "show": "never"
-  },
-  "project_panel": { "dock": "right" },
-  "git_panel": { "dock": "right" },
-  "outline_panel": { "dock": "right" },
-  "collaboration_panel": {
-    "button": false
-  },
-  "notification_panel": {
-    "button": false
-  },
-  "active_pane_modifiers": {
-    "inactive_opacity": 0.75
-  },
+  "disable_ai": true,
+  // ******************* Code Helpers *******************
+  "auto_signature_help": true,
   "inlay_hints": {
-    "enabled": true
-  },
-  "indent_guides": {
     "enabled": true,
-    "coloring": "indent_aware"
+    "show_value_hints": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "show_background": false,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50,
+    "toggle_on_modifiers_press": {
+      "control": false,
+      "alt": false,
+      "shift": false,
+      "platform": false,
+      "function": false
+    }
   },
-
-  // Terminal
-  "terminal": {
-    "shell": {
-      "program": "zsh"
-    },
-    "env": {
-      "EDITOR": "zed --wait"
-    },
-    "font_size": 14,
-    "font_weight": 100,
-    "font_family": "JetBrainsMono Nerd Font"
-  },
-
-  // Diagnostics
   "diagnostics": {
     "inline": {
       "enabled": true
     }
   },
-
-  // Language Related
-  "file_types": {
-    "Shell Script": ["npf"]
+  // ******************* Styling *******************
+  // Theme
+  "icon_theme": "Catppuccin Macchiato",
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Macchiato",
+    "dark": "Catppuccin Mocha"
   },
-  "languages": {
-    "Python": {
-      "format_on_save": "on",
-      "language_servers": ["pyright", "ruff"],
-      "formatter": [
-        {
-          "code_actions": {
-            "source.organizeImports.ruff": true,
-            "source.fixAll.ruff": true
-          }
-        },
-        {
-          "language_server": {
-            "name": "ruff"
-          }
-        }
-      ]
-    }
+  // Fonts
+  "buffer_font_family": "CaskaydiaCove Nerd Font Mono",
+  "ui_font_family": "FiraCode Nerd Font",
+  "ui_font_size": 15.0,
+  "buffer_font_size": 13.0,
+  // UI
+  "cursor_blink": false,
+  "rounded_selection": true,
+  "search": {
+    "button": false
   },
-
-  "lsp": {
-    "pyright": {
-      "settings": {
-        "python": {
-          // "pythonPath": ".venv/bin/python"
-        }
-      }
-    },
-    "ruff": {
-      "initialization_options": {
-        "settings": {
-          // Ruff server settings goes here
-          "lineLength": 80,
-          "lint": {
-            "extendSelect": ["I"]
-          }
-        }
-      }
-    },
-    "jdtls": {
-      "initialization_options": {
-        "bundles": [],
-        "workspaceFolders": ["file:///home/ajungers/Documents/projects"],
-        "settings": {
-          "java": {
-            "errors": {
-              "incompleteClasspath": {
-                "severity": "warning"
-              }
-            },
-            "configuration": {
-              "updateBuildConfiguration": "interactive"
-            },
-            "trace": {
-              "server": "verbose"
-            },
-            "import": {
-              "gradle": {
-                "enabled": true
-              },
-              "maven": {
-                "enabled": true
-              },
-              "exclusions": [
-                "**/node_modules/**",
-                "**/.metadata/**",
-                "**/archetype-resources/**",
-                "**/META-INF/maven/**",
-                "/**/test/**"
-              ]
-            },
-            "jdt": {
-              "ls": {
-                "lombokSupport": {
-                  "enabled": false // Set this to true to enable lombok support
-                }
-              }
-            },
-            "referencesCodeLens": {
-              "enabled": false
-            },
-            "signatureHelp": {
-              "enabled": false
-            },
-            "implementationsCodeLens": {
-              "enabled": false
-            },
-            "format": {
-              "enabled": true
-            },
-            "saveActions": {
-              "organizeImports": true
-            },
-            "contentProvider": {
-              "preferred": null
-            },
-            "autobuild": {
-              "enabled": true
-            },
-            "completion": {
-              "favoriteStaticMembers": [
-                "org.junit.Assert.*",
-                "org.junit.Assume.*",
-                "org.junit.jupiter.api.Assertions.*",
-                "org.junit.jupiter.api.Assumptions.*",
-                "org.junit.jupiter.api.DynamicContainer.*",
-                "org.junit.jupiter.api.DynamicTest.*"
-              ],
-              "importOrder": ["java", "javax", "com", "org"]
-            }
-          }
-        }
-      }
-    }
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+    "selections_menu": false
   },
-
-  // Assistant settings
-  "assistant": {
+  "title_bar": {
+    "show_branch_icon": false,
+    "show_branch_name": true,
+    "show_project_items": false,
+    "show_sign_in": false
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false
+  },
+  "tabs": {
+    "show_diagnostics": "all",
+    "file_icons": true,
+    "git_status": true
+  },
+  "relative_line_numbers": true,
+  "indent_guides": {
     "enabled": true,
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
-    },
-    "version": "2"
+    "coloring": "indent_aware"
   },
-  "features": {
-    "copilot": true,
-    "edit_prediction_provider": "copilot"
+  "wrap_guides": [90],
+  "show_wrap_guides": true,
+  "scrollbar": {
+    "show": "never"
   },
-  "language_models": {
-    "ollama": {
-      "api_url": "http://localhost:11434",
-      "available_models": [
-        {
-          "name": "qwen2.5-coder",
-          "display_name": "qwen 2.5 coder 7k",
-          "max_tokens": 16384
-        }
-      ]
-    }
+
+  // Panels
+  "project_panel": {
+    "sticky_scroll": true,
+    "dock": "right"
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "git_panel": {
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  // ******************* Usability *******************
+  // Keymaps
+  "base_keymap": "VSCode",
+  "vim_mode": true,
+  // "helix_mode": true,
+  "vim": {
+    "use_smartcase_find": true,
+    "use_system_clipboard": "always"
+  },
+
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
   }
 }
