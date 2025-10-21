@@ -112,5 +112,76 @@
   "telemetry": {
     "diagnostics": false,
     "metrics": false
+  },
+
+  "lsp": {
+    "jdtls": {
+      "initialization_options": {
+        "bundles": [],
+        "workspaceFolders": []
+      },
+      "settings": {
+        "java": {
+          "cleanup": {
+            "actionsOnSave": [
+              "addOverride",
+              "invertEquals",
+              "addFinalModifier",
+              "lambdaExpression",
+              "switchExpression"
+            ]
+          },
+          "codeGeneration": {
+            "generateComments": true,
+            "hashCodeEquals": { "useJava7Objects": true },
+            "useBlocks": true,
+            "addFinalForNewDeclaration": "all"
+            // TO String and hashCode generation
+          },
+          "completion": {
+            "guessMethodArguments": true,
+            "importOrder": ["java", "javax", "com", "org"],
+            "postfix": { "enabled": true }
+          },
+          // "contentProvider": { "prefered": ["fernflower"] },
+          "format": {
+            "settings": {
+              "url": "path",
+              "profile": "ARHS"
+            }
+          },
+          "implementationsCodeLens": "all",
+          "jdt": {
+            "ls": {
+              "lombokSupport": { "enabled": true }
+            }
+          },
+          "maven": {
+            "downloadSources": true,
+            "updateSnapshots": true
+          },
+          "referencesCodeLens": { "enabled": true },
+          "references": {
+            "includeAccessors": true,
+            "includeDecompiledSources": true
+          },
+          "saveActions": { "organizeImports": true, "cleanup": true },
+          "signatureHelp": {
+            "enabled": true,
+            "description": { "enabled": true }
+          },
+          "sources": {
+            "organizeImports": {
+              "starThreshold": 9999,
+              "staticStarThreshold": 9999
+            }
+          }
+          // "completion": {
+          //   "favoriteStaticMembers": {},
+          //   "filteredTypes": {}
+          // },
+        }
+      }
+    }
   }
 }
