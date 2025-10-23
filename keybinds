@@ -1,0 +1,33 @@
+Vim in zed
+
+	g f -> go to file under selection
+	g x -> go to link under selection
+
+Language Server
+	g d -> go to definition
+	g y -> go to type definition
+	g I -> go to implementation
+	c d -> rename
+	g s -> find symbol (file)
+	g S -> find symobl (project)
+	g h -> hover
+	g i -> code action (mine)
+	
+	space f -> format code
+	g c -> comment code
+
+Pane management
+	space p s -> project search (mine)
+	space p f -> project file find (mine)
+	space p e -> project errors
+	space p m -> file explorer
+	g space -> open excerpt
+	ctrl ; -> open terminal
+
+text objects 
+	a -> arguments
+	f -> function
+	c -> class
+	t -> tag
+	
+ctrl-(hjkl) move between panes
